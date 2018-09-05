@@ -314,9 +314,11 @@ header{
 
 .introduction>div{
 	width: 60%;
+	min-width: 980px;
 	margin: auto;
 	display: flex;
 	flex-direction: row;
+	padding: 50px 0; 
 	align-items: center;
 	justify-content: center;
 	.content{
@@ -361,6 +363,7 @@ header{
 
 .signup-session>div{
 	width: 60%;
+	min-width: 980px;
 	margin: 30px auto;
 	display: flex;
 	align-items: flex-start;
@@ -372,8 +375,9 @@ header{
 		font-weight: bold;
 	}
 	.left{
-		width: 30%;
+		width: 40%;
 		p{
+			width: 70%;
 			margin-left: 25px;
 		}
 	}

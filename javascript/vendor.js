@@ -1,6 +1,7 @@
 
 
 let slice = 0;
+let pause = false;
 
 const setIdForSliderAndDot = () => {
 	const slideDOM = document.querySelector('.slide');
@@ -25,25 +26,44 @@ const setIdForSliderAndDot = () => {
 	};
 };
 
-const slidingFunc = () => {
-	slice ++;
-	if (slice > 2) slice = 0;
-	setIdForSliderAndDot();
-};
 
 document.addEventListener("DOMContentLoaded", () => {
 	setIdForSliderAndDot();
 })
 
+const slidingFunc = () => {
+	if (!pause) {
+		slice ++;
+		if (slice > 2) slice = 0;
+		setIdForSliderAndDot();
+	}
+};
+
 var sliding = setInterval(slidingFunc, 2000);
+
+const pauseInterval = () => {
+	pause = true;
+	setTimeout(()=>{pause = false}, 5000);
+}
 
 const setIdx = (e) => {
 	slice = e.target.dataset.idx * 1;
 	setIdForSliderAndDot();
-	window.clearInterval(sliding);
-	setTimeout(()=>{
-		sliding = setInterval(slidingFunc, 2000);
-	}, 5000);
-}
+	pauseInterval();
+};
+
 
 document.querySelectorAll('.dot i').forEach(dot => dot.addEventListener('click', setIdx));
+
+document.querySelector('.slide-container svg.left').addEventListener('click', ()=>{
+		slice--;
+		if (slice < 0) slice = 2;
+		setIdForSliderAndDot();
+});
+
+document.querySelector('.slide-container svg.right').addEventListener('click', ()=>{
+		slice++;
+		if (slice>2) slice = 0;
+		setIdForSliderAndDot();
+		pauseInterval();
+});
