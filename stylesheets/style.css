@@ -237,61 +237,158 @@ header nav ul .nav-more:hover .dropdown {
   visibility: inherit;
 }
 
-.slide {
-  position: fixed;
-  top: 7vh;
+.slide-container {
+  overflow: hidden;
+  width: 100vw;
+  margin-top: 7vh;
   height: 75vh;
-  display: flex;
-  flex-direction: row;
+  position: relative;
 }
-.slide i {
+.slide-container i {
   position: absolute;
   font-size: 48px;
-  color: white;
+  color: #ffffff;
   top: 45%;
   cursor: pointer;
 }
-.slide .fa-angle-left {
+.slide-container .fa-angle-left {
   left: 10px;
 }
-.slide .fa-angle-right {
+.slide-container .fa-angle-right {
   left: 95vw;
 }
-.slide .slide-1, .slide .slide-2, .slide .slide-3 {
+.slide-container i:hover {
+  color: #ededed;
+  transition: all 0.8s;
+}
+.slide-container .dot {
+  position: absolute;
+  bottom: 20px;
+  height: 20px;
+  left: 25%;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.slide-container .dot i {
+  position: static;
+  font-size: 7px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.slide-container .slide {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.slide-container .slide .slide-1, .slide-container .slide .slide-2, .slide-container .slide .slide-3 {
   height: 100%;
   width: 100vw;
 }
-.slide .slide-1 .content, .slide .slide-2 .content, .slide .slide-3 .content {
+.slide-container .slide .slide-1 .content, .slide-container .slide .slide-2 .content, .slide-container .slide .slide-3 .content {
   width: 50%;
+  min-width: 700px;
   color: white;
   margin: 200px auto;
   text-align: center;
-  min-width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 30%;
 }
-.slide .slide-1 .content h2, .slide .slide-2 .content h2, .slide .slide-3 .content h2 {
+.slide-container .slide .slide-1 .content h2, .slide-container .slide .slide-2 .content h2, .slide-container .slide .slide-3 .content h2 {
   font-size: 48px;
 }
-.slide .slide-1 .content button, .slide .slide-2 .content button, .slide .slide-3 .content button {
-  margin: 20px auto;
-  padding: 7px 15px;
-  border: 1px solid white;
+.slide-container .slide .slide-1 .content p, .slide-container .slide .slide-2 .content p, .slide-container .slide .slide-3 .content p {
+  margin: 15px auto;
 }
-.slide .slide-1 {
+.slide-container .slide .slide-1 .content button, .slide-container .slide .slide-2 .content button, .slide-container .slide .slide-3 .content button {
+  margin: 20px auto;
+  padding: 9px 18px;
+  border: 1px solid #ffffff;
+  font-size: 13px;
+}
+.slide-container .slide .slide-1 .content button:hover, .slide-container .slide .slide-2 .content button:hover, .slide-container .slide .slide-3 .content button:hover {
+  background-color: #ffffff;
+  color: #333;
+  transition: all 0.8s;
+}
+.slide-container .slide .slide-1 {
   background-image: url("../images/background_1.jpg");
   background-size: cover;
 }
-.slide .slide-2 {
+.slide-container .slide .slide-2 {
   background-image: url("../images/background_2.jpg");
   background-size: cover;
 }
-.slide .slide-3 {
+.slide-container .slide .slide-3 {
   background-image: url("../images/background_3.jpg");
   background-size: cover;
+}
+
+.introduction {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #ededed;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.introduction .content {
+  width: 300px;
+}
+.introduction .video {
+  flex: 1;
+}
+
+footer {
+  width: 100%;
+}
+footer .footer-category {
+  min-width: 650px;
+}
+footer ul {
+  width: 40%;
+  margin: 50px auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer ul li {
+  color: #ff5465;
+  font-weight: bold;
+  cursor: pointer;
+}
+footer ul li ul {
+  margin: 15px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer ul li ul li {
+  width: 100%;
+  color: #333;
+  font-weight: normal;
+  margin: 15px 0;
+}
+footer ul li ul li:hover {
+  color: #546a76;
+  text-decoration: underline;
+  transition: all 0.8s;
+}
+footer .copyright {
+  min-width: 400px;
+  font-size: 10px;
+  color: gray;
+  width: 40%;
+  margin: 10px auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
