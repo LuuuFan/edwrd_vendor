@@ -237,4 +237,61 @@ header nav ul .nav-more:hover .dropdown {
   visibility: inherit;
 }
 
+.slide {
+  position: fixed;
+  top: 7vh;
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+}
+.slide i {
+  position: absolute;
+  font-size: 48px;
+  color: white;
+  top: 45%;
+  cursor: pointer;
+}
+.slide .fa-angle-left {
+  left: 10px;
+}
+.slide .fa-angle-right {
+  left: 95vw;
+}
+.slide .slide-1, .slide .slide-2, .slide .slide-3 {
+  height: 100%;
+  width: 100vw;
+}
+.slide .slide-1 .content, .slide .slide-2 .content, .slide .slide-3 .content {
+  width: 50%;
+  color: white;
+  margin: 200px auto;
+  text-align: center;
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+}
+.slide .slide-1 .content h2, .slide .slide-2 .content h2, .slide .slide-3 .content h2 {
+  font-size: 48px;
+}
+.slide .slide-1 .content button, .slide .slide-2 .content button, .slide .slide-3 .content button {
+  margin: 20px auto;
+  padding: 7px 15px;
+  border: 1px solid white;
+}
+.slide .slide-1 {
+  background-image: url("../images/background_1.jpg");
+  background-size: cover;
+}
+.slide .slide-2 {
+  background-image: url("../images/background_2.jpg");
+  background-size: cover;
+}
+.slide .slide-3 {
+  background-image: url("../images/background_3.jpg");
+  background-size: cover;
+}
+
 /*# sourceMappingURL=style.css.map */
