@@ -331,19 +331,147 @@ header nav ul .nav-more:hover .dropdown {
 
 .introduction {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   padding: 30px 0;
   border-bottom: 1px solid #ededed;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
-.introduction .content {
-  width: 300px;
+
+.introduction > div {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-.introduction .video {
+.introduction > div .content {
+  width: 350px;
+  margin-right: 50px;
+}
+.introduction > div .content div {
+  padding-bottom: 30px;
+}
+.introduction > div .content div h3 {
+  margin: 10px 0;
+}
+.introduction > div .video {
   flex: 1;
+}
+.introduction > div .video iframe {
+  width: 100%;
+}
+
+.vendor-list {
+  width: 100%;
+}
+.vendor-list h2 {
+  font-size: 24px;
+  font-weight: 999;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  height: 100%;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.vendor-list .list {
+  background-color: rgba(255, 84, 101, 0.2);
+  height: 250px;
+  width: 100%;
+}
+
+.signup-session {
+  width: 100%;
+}
+
+.signup-session > div {
+  width: 60%;
+  margin: 30px auto;
+  display: flex;
+  align-items: flex-start;
+  padding: 50px 0 100px 0;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+}
+.signup-session > div h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.signup-session > div .left {
+  width: 30%;
+}
+.signup-session > div .left p {
+  margin-left: 25px;
+}
+.signup-session > div .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-session > div .right .social-buttons {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-session > div .right .social-buttons i {
+  font-size: 30px;
+  margin: 0 10px;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.signup-session > div .right .social-buttons .fa-facebook-f:hover {
+  color: #4267b2;
+}
+.signup-session > div .right .social-buttons .fa-google-plus-g:hover {
+  color: #db3236;
+}
+.signup-session > div .right .social-buttons .fa-youtube:hover {
+  color: #ff0000;
+}
+.signup-session > div .right .social-buttons .fa-instagram:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.signup-session > div .right form {
+  width: 100%;
+  text-align: center;
+}
+.signup-session > div .right form .form-inline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 15px 0;
+}
+.signup-session > div .right form .form-inline label {
+  margin-right: 10px;
+}
+.signup-session > div .right form .form-inline input {
+  width: 60%;
+  text-align: left;
+  transform: translateY(-7px);
+  border-bottom: 1px solid #333;
+}
+.signup-session > div .right form .form-inline input:focus {
+  transform: translateY(0);
+  transition: all 0.8s;
+}
+.signup-session > div .right form input[type=submit] {
+  margin: 15px auto;
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+.signup-session > div .right form input[type=submit]:hover {
+  background-color: #333;
+  color: #ffffff;
+  transition: all 0.8s;
 }
 
 footer {
