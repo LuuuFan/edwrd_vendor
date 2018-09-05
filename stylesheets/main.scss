@@ -1,0 +1,162 @@
+@import './reset';
+@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+$white: #ffffff;
+$gray: #ededed;
+$dark-blue: #546a76;
+$light-blue: #c6dbf0;
+$pink: #ff5465;
+$purple: rgba(133, 77, 255, 1);
+
+h1, h2, h3, h4{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.tooltip{
+	display: none;
+	position: absolute;
+	background: rgba(0,0,0,0.4);
+	padding: 3px 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	color: white;
+}
+
+.tooltip:after, .tooltip:before{
+    position: absolute;
+		content: " ";
+		bottom: -10px;
+    left: 50%;
+    border: 2px solid transparent;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+}
+.tooltip:after {
+  border-top-color: rgba(0,0,0,0.2);
+  border-width: 5px;
+  margin-left: -5px;
+}
+.tooltip:before {
+  border-top-color: rgba(0,0,0,0.2);
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+header{
+	width: 100%;
+	height: 7vh;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+	background-color: white;
+	.logo{
+		display: flex;
+		align-items: center;
+		margin-left: 10%;
+		height: 100%;
+		cursor: pointer;
+		h1{
+			font-size: 28px;
+			color: $pink;
+			font-weight: bold;
+		}
+		.logo-container{
+			margin-left: 20px;
+			height: 30px;
+			img{
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	nav{
+		display: flex;
+		align-items: center;
+		.hamburger{
+			visibility: hidden;
+		}
+		.login-button{
+			color: $purple;
+			display: flex;
+			align-items: center;
+			i{
+				font-size: 18px;
+				margin-right: 7px;
+			}
+		}
+		.login-button:hover{
+			color: $purple;
+		}
+		ul{
+			display: flex;
+			align-items: center;
+			margin-right: 40px;
+			li{
+				padding: 7px 15px;
+			}
+			li:hover{
+				transition: all .8s;
+				color: gray;
+			}
+			.nav-more{
+				position: relative;
+			}
+			.dropdown{
+				visibility: hidden;
+				position: absolute;
+				top: 110%;
+				left: -150%;
+				z-index: 10;
+				background-color: black;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				font-size: 12px;
+				width: 150px;
+  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+				align-items: flex-start;
+				li{
+					padding: 10px 0;
+					color: $white;
+					width: 100%;
+					border-bottom: 1px solid black;
+					text-indent: 20px;
+					border-radius: 5px;
+					overflow: hidden;
+				}
+				li:hover{
+					border-bottom: 1px solid $white;
+					transition: all .8s;
+				}
+			}
+			.dropdown:after, .dropdown:before{
+          position: absolute;
+					content: " ";
+					top: -20px;
+          left: 85%;
+          border: 2px solid transparent;
+          height: 0;
+          width: 0;
+          pointer-events: none;
+			}
+			.dropdown:after {
+        border-bottom-color: black;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+      .dropdown:before {
+        border-bottom-color: black;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+			.nav-more:hover .dropdown{
+				visibility: inherit;
+			}
+		}
+	}
+}
