@@ -176,8 +176,8 @@ header{
 
 .slide-container{
 	width: 100vw;
-	margin-top: 7vh;
 	height: 75vh;
+	margin-top: 7vh;
 	overflow: hidden;
 	position: relative;
 	transform: translate3d(0, 0, 0);
@@ -522,5 +522,231 @@ footer{
 		width: 40%;
 		margin: 10px auto;
 		text-align: center;
+	}
+}
+
+@media only screen and (min-device-width: 480px) and (max-width: 768px) {
+	header{
+		.logo{
+			margin-left: 15px;
+		}
+		nav{
+			.hamburger{
+				visibility: inherit;
+				color: gray;
+				position: relative;
+				margin: 0 30px;
+			}
+			.hamburger:hover{
+				color: $purple;
+				transition: all .8s;
+			}
+			.hamburger:hover ~ ul{
+				display: block;
+				transition: all .8s;
+			}
+			ul:hover{
+				display: block;
+				transition: all .8s;
+			}
+			ul{
+				display: none;
+				width: 150px;
+				position: absolute;
+				background-color: white;
+				padding: 0;
+  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+				border-radius: 5px;
+				overflow: hidden;
+				top: 65%;
+				right: -20px;
+				li{
+					margin: 15px 0;
+				}
+				.nav-more{
+					.dropdown{
+						display: none;
+						position: static;
+						background-color: white;
+						box-shadow: none;
+						li{
+							border: none;
+							color: #333;
+							text-indent: 7px;
+						}
+						li:hover{
+							color: $dark-blue;
+							text-decoration: underline;
+							transition: all .8s;
+  						// box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+						}
+					}
+					.dropdown:after, .dropdown:before{
+						content: "";
+						border: 0px;
+					}
+				}
+				.nav-more:hover .dropdown{
+					display: block;
+					transition: all .8s;
+				}
+			}
+		}
+	}
+	.slide-container{
+		max-height: 600px;
+	}
+	.introduction>div{
+		min-width: auto;
+		width: 100%;
+		flex-direction: column;
+		.content, .video{
+			width: 70%;
+			margin: auto;
+		}
+		.content{
+			h3{
+				width: 100%;
+				margin: 30px;
+				text-align: center;
+			}
+			p{
+				font-size: 18px;
+			}
+		}
+	}
+	.signup-session>div{
+		min-width: auto;
+		width: 100%;
+		flex-direction: column;
+		.left, .right{
+			width: 70%;
+			margin: auto;
+		}
+		.left{
+			h3{
+				width: 100%;
+				text-align: center;	
+			}
+			p{
+				margin: auto;
+				width: 60%;
+				font-size: 18px;
+				text-align: center;	
+			}
+		}
+	}
+}
+
+@media only screen and (max-device-width : 480px) {
+	header{
+		.logo{
+			margin-left: 15px;
+		}
+		nav{
+			.hamburger{
+				visibility: inherit;
+				color: gray;
+				position: relative;
+				margin: 0 30px;
+			}
+			.hamburger:hover{
+				color: $purple;
+				transition: all .8s;
+			}
+			.hamburger:hover ~ ul{
+				display: block;
+				transition: all .8s;
+			}
+			ul:hover{
+				display: block;
+				transition: all .8s;
+			}
+			ul{
+				display: none;
+				width: 150px;
+				position: absolute;
+				background-color: white;
+				padding: 0;
+  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+				border-radius: 5px;
+				overflow: hidden;
+				top: 65%;
+				right: -20px;
+				li{
+					margin: 15px 0;
+				}
+				.nav-more{
+					.dropdown{
+						display: none;
+						position: static;
+						background-color: white;
+						box-shadow: none;
+						li{
+							border: none;
+							color: #333;
+							text-indent: 7px;
+						}
+						li:hover{
+							color: $dark-blue;
+							text-decoration: underline;
+							transition: all .8s;
+  						// box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+						}
+					}
+					.dropdown:after, .dropdown:before{
+						content: "";
+						border: 0px;
+					}
+				}
+				.nav-more:hover .dropdown{
+					display: block;
+					transition: all .8s;
+				}
+			}
+		}
+	}
+	.slide-container{
+		max-height: 600px;
+	}
+	.introduction>div{
+		min-width: auto;
+		width: 100%;
+		flex-direction: column;
+		.content, .video{
+			width: 70%;
+			margin: auto;
+		}
+		.content{
+			h3{
+				width: 100%;
+				margin: 30px;
+				text-align: center;
+			}
+			p{
+				font-size: 18px;
+			}
+		}
+	}
+	.signup-session>div{
+		min-width: auto;
+		width: 100%;
+		flex-direction: column;
+		.left, .right{
+			width: 70%;
+			margin: auto;
+		}
+		.left{
+			h3{
+				width: 100%;
+				text-align: center;
+			}
+			p{
+				margin: auto;
+				width: 60%;
+				font-size: 18px;
+				text-align: center;	
+			}
+		}
 	}
 }

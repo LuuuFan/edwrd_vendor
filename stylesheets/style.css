@@ -248,8 +248,8 @@ header nav ul .nav-more:hover .dropdown {
 
 .slide-container {
   width: 100vw;
-  margin-top: 7vh;
   height: 75vh;
+  margin-top: 7vh;
   overflow: hidden;
   position: relative;
   transform: translate3d(0, 0, 0);
@@ -585,6 +585,215 @@ footer .copyright {
   width: 40%;
   margin: 10px auto;
   text-align: center;
+}
+
+@media only screen and (min-device-width: 480px) and (max-width: 768px) {
+  header .logo {
+    margin-left: 15px;
+  }
+  header nav .hamburger {
+    visibility: inherit;
+    color: gray;
+    position: relative;
+    margin: 0 30px;
+  }
+  header nav .hamburger:hover {
+    color: #854dff;
+    transition: all 0.8s;
+  }
+  header nav .hamburger:hover ~ ul {
+    display: block;
+    transition: all 0.8s;
+  }
+  header nav ul:hover {
+    display: block;
+    transition: all 0.8s;
+  }
+  header nav ul {
+    display: none;
+    width: 150px;
+    position: absolute;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    top: 65%;
+    right: -20px;
+  }
+  header nav ul li {
+    margin: 15px 0;
+  }
+  header nav ul .nav-more .dropdown {
+    display: none;
+    position: static;
+    background-color: white;
+    box-shadow: none;
+  }
+  header nav ul .nav-more .dropdown li {
+    border: none;
+    color: #333;
+    text-indent: 7px;
+  }
+  header nav ul .nav-more .dropdown li:hover {
+    color: #546a76;
+    text-decoration: underline;
+    transition: all 0.8s;
+  }
+  header nav ul .nav-more .dropdown:after, header nav ul .nav-more .dropdown:before {
+    content: "";
+    border: 0px;
+  }
+  header nav ul .nav-more:hover .dropdown {
+    display: block;
+    transition: all 0.8s;
+  }
+
+  .slide-container {
+    max-height: 600px;
+  }
+
+  .introduction > div {
+    min-width: auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  .introduction > div .content, .introduction > div .video {
+    width: 70%;
+    margin: auto;
+  }
+  .introduction > div .content h3 {
+    width: 100%;
+    margin: 30px;
+    text-align: center;
+  }
+  .introduction > div .content p {
+    font-size: 18px;
+  }
+
+  .signup-session > div {
+    min-width: auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  .signup-session > div .left, .signup-session > div .right {
+    width: 70%;
+    margin: auto;
+  }
+  .signup-session > div .left h3 {
+    width: 100%;
+    text-align: center;
+  }
+  .signup-session > div .left p {
+    margin: auto;
+    width: 60%;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  header .logo {
+    margin-left: 15px;
+  }
+  header nav .hamburger {
+    visibility: inherit;
+    color: gray;
+    position: relative;
+    margin: 0 30px;
+  }
+  header nav .hamburger:hover {
+    color: #854dff;
+    transition: all 0.8s;
+  }
+  header nav .hamburger:hover ~ ul {
+    display: block;
+    transition: all 0.8s;
+  }
+  header nav ul:hover {
+    display: block;
+    transition: all 0.8s;
+  }
+  header nav ul {
+    display: none;
+    width: 150px;
+    position: absolute;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    top: 65%;
+    right: -20px;
+  }
+  header nav ul li {
+    margin: 15px 0;
+  }
+  header nav ul .nav-more .dropdown {
+    display: none;
+    position: static;
+    background-color: white;
+    box-shadow: none;
+  }
+  header nav ul .nav-more .dropdown li {
+    border: none;
+    color: #333;
+    text-indent: 7px;
+  }
+  header nav ul .nav-more .dropdown li:hover {
+    color: #546a76;
+    text-decoration: underline;
+    transition: all 0.8s;
+  }
+  header nav ul .nav-more .dropdown:after, header nav ul .nav-more .dropdown:before {
+    content: "";
+    border: 0px;
+  }
+  header nav ul .nav-more:hover .dropdown {
+    display: block;
+    transition: all 0.8s;
+  }
+
+  .slide-container {
+    max-height: 600px;
+  }
+
+  .introduction > div {
+    min-width: auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  .introduction > div .content, .introduction > div .video {
+    width: 70%;
+    margin: auto;
+  }
+  .introduction > div .content h3 {
+    width: 100%;
+    margin: 30px;
+    text-align: center;
+  }
+  .introduction > div .content p {
+    font-size: 18px;
+  }
+
+  .signup-session > div {
+    min-width: auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  .signup-session > div .left, .signup-session > div .right {
+    width: 70%;
+    margin: auto;
+  }
+  .signup-session > div .left h3 {
+    width: 100%;
+    text-align: center;
+  }
+  .signup-session > div .left p {
+    margin: auto;
+    width: 60%;
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
