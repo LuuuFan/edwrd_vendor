@@ -595,6 +595,13 @@ footer{
 	}
 	.slide-container{
 		max-height: 600px;
+		.slide{
+			.slide-1, .slide-2, .slide-3{
+				.content{
+					height: 50%;
+				}
+			}
+		}
 	}
 	.introduction>div{
 		min-width: auto;
@@ -708,6 +715,13 @@ footer{
 	}
 	.slide-container{
 		max-height: 600px;
+		.slide{
+			.slide-1, .slide-2, .slide-3{
+				.content{
+					height: 50%;
+				}
+			}
+		}
 	}
 	.introduction>div{
 		min-width: auto;

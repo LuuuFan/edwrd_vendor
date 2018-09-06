@@ -652,6 +652,9 @@ footer .copyright {
   .slide-container {
     max-height: 600px;
   }
+  .slide-container .slide .slide-1 .content, .slide-container .slide .slide-2 .content, .slide-container .slide .slide-3 .content {
+    height: 50%;
+  }
 
   .introduction > div {
     min-width: auto;
@@ -755,6 +758,9 @@ footer .copyright {
 
   .slide-container {
     max-height: 600px;
+  }
+  .slide-container .slide .slide-1 .content, .slide-container .slide .slide-2 .content, .slide-container .slide .slide-3 .content {
+    height: 50%;
   }
 
   .introduction > div {
