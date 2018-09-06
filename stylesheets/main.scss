@@ -436,12 +436,18 @@ header{
 		form{
 			width: 100%;
 			text-align: center;
+			.notification{
+				font-size: 10px;
+				color: red;
+				text-align: right;
+				width: 100%;
+			}
 			.form-inline{
 				width: 100%;
 				display: flex;
 				justify-content: space-between;
 				align-items: flex-end;
-				margin: 15px 0;
+				margin-top: 15px;
 				label{
 					margin-right: 10px;
 				}

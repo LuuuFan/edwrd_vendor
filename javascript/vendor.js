@@ -91,15 +91,16 @@ const validEmail = (email) => {
 document.querySelector('.signup-session form').addEventListener('submit', (e) => {
 		e.preventDefault();
 		if (!e.target.querySelector('input[name="store_name"]').value) {
+				$('.signup-session .store_name').fadeIn(1000)
 		}
 		if (!e.target.querySelector('input[name="address"]').value) {
-
+				$('.signup-session .address').fadeIn(1000)
 		}
 		if (!e.target.querySelector('input[name="name"]').value) {
-
+				$('.signup-session .name').fadeIn(1000)
 		}
 		if (!validEmail(e.target.querySelector('input[name="email"]').value)) {
-
+				$('.signup-session .email').fadeIn(1000)
 		}
 		if (validEmail(e.target.querySelector('input[name="email"]').value) && 
 				e.target.querySelector('input[name="store_name"]').value &&
@@ -112,4 +113,9 @@ document.querySelector('.signup-session form').addEventListener('submit', (e) =>
 				localStorage.setItem('signuped', true);
 				hideSignupForm();
 		}
-})
+});
+
+document.querySelectorAll('.signup-session form input[type="text"]')
+		.forEach(input => input.addEventListener('change', (e) => {
+				$(`.signup-session .${e.target.name}`).fadeOut(1000);
+		}));
