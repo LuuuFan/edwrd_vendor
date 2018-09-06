@@ -458,7 +458,7 @@ header nav ul .nav-more:hover .dropdown {
   align-items: center;
 }
 .signup-session > div .right .social-buttons {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -529,16 +529,18 @@ header nav ul .nav-more:hover .dropdown {
   transition: all 0.8s;
 }
 .signup-session > div .right form input[type=submit] {
-  margin: 15px auto;
+  margin: 30px auto;
   padding: 10px 20px;
   text-align: center;
   border: 1px solid #333;
   border-radius: 30px;
+  transform: translateY(0);
 }
 .signup-session > div .right form input[type=submit]:hover {
   background-color: #333;
   color: #ffffff;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  transform: translateY(5px);
   transition: all 0.8s;
 }
 
