@@ -587,7 +587,7 @@ footer .copyright {
   text-align: center;
 }
 
-@media only screen and (min-device-width: 480px) and (max-width: 768px) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 960px) {
   header .logo {
     margin-left: 15px;
   }
