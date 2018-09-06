@@ -1,7 +1,8 @@
 
 
-let slice = 0;
-let pause = false;
+let slice = 0,
+		pause = false,
+		signuped = false;
 
 const setIdForSliderAndDot = () => {
 	const slideDOM = document.querySelector('.slide');
@@ -26,10 +27,22 @@ const setIdForSliderAndDot = () => {
 	};
 };
 
+const hideSignupForm = () => {
+		const form = document.querySelector('.signup-session form');
+		const succeedDOM = document.querySelector('.signup-session .succeed');
+		$(form).fadeOut(1000);
+		$(succeedDOM).fadeIn(1000);
+};
 
 document.addEventListener("DOMContentLoaded", () => {
 	setIdForSliderAndDot();
+	const signupBoolean = localStorage.getItem('signuped');
+	signuped = signupBoolean === 'true' ? true : false;
+	if (signuped) {
+			hideSignupForm();
+	}
 })
+
 
 const slidingFunc = () => {
 	if (!pause) {
@@ -59,6 +72,7 @@ document.querySelector('.slide-container svg.left').addEventListener('click', ()
 		slice--;
 		if (slice < 0) slice = 2;
 		setIdForSliderAndDot();
+		pauseInterval();
 });
 
 document.querySelector('.slide-container svg.right').addEventListener('click', ()=>{
@@ -67,3 +81,35 @@ document.querySelector('.slide-container svg.right').addEventListener('click', (
 		setIdForSliderAndDot();
 		pauseInterval();
 });
+
+const validEmail = (email) => {
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
+
+document.querySelector('.signup-session form').addEventListener('submit', (e) => {
+		e.preventDefault();
+		if (!e.target.querySelector('input[name="store_name"]').value) {
+		}
+		if (!e.target.querySelector('input[name="address"]').value) {
+
+		}
+		if (!e.target.querySelector('input[name="name"]').value) {
+
+		}
+		if (!validEmail(e.target.querySelector('input[name="email"]').value)) {
+
+		}
+		if (validEmail(e.target.querySelector('input[name="email"]').value) && 
+				e.target.querySelector('input[name="store_name"]').value &&
+				e.target.querySelector('input[name="address"]').value &&
+				e.target.querySelector('input[name="name"]').value
+			) {
+		// !!!import!!!!!  Send to backend~~~~api call~~~~~then reset~~~~~~
+				e.target.reset();
+				signuped = true;
+				localStorage.setItem('signuped', true);
+				hideSignupForm();
+		}
+})

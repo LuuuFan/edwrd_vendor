@@ -242,6 +242,10 @@ header nav ul .nav-more:hover .dropdown {
   visibility: inherit;
 }
 
+.modal {
+  display: none;
+}
+
 .slide-container {
   width: 100vw;
   margin-top: 7vh;
@@ -258,6 +262,7 @@ header nav ul .nav-more:hover .dropdown {
   cursor: pointer;
   height: 50px;
   width: 50px;
+  z-index: 5;
 }
 .slide-container svg polygon {
   stroke: white;
@@ -387,7 +392,7 @@ header nav ul .nav-more:hover .dropdown {
 }
 .introduction > div .content {
   width: 350px;
-  margin-right: 50px;
+  margin-right: 100px;
 }
 .introduction > div .content div {
   padding-bottom: 30px;
@@ -416,7 +421,7 @@ header nav ul .nav-more:hover .dropdown {
 }
 .vendor-list .list {
   background-color: rgba(255, 84, 101, 0.2);
-  height: 250px;
+  height: 300px;
   width: 100%;
 }
 
@@ -479,6 +484,18 @@ header nav ul .nav-more:hover .dropdown {
   -webkit-text-fill-color: transparent;
   color: transparent;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.signup-session > div .right .succeed {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  padding: 0 100px;
+}
+.signup-session > div .right .succeed p {
+  width: 50%;
+  margin: 30px auto;
 }
 .signup-session > div .right form {
   width: 100%;
