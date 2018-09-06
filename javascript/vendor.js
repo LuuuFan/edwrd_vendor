@@ -87,6 +87,13 @@ const validEmail = (email) => {
   return re.test(String(email).toLowerCase());
 };
 
+document.querySelectorAll('.slide button').forEach(button=>button.addEventListener('mouseover', ()=>{
+	pause = true;
+}));
+
+document.querySelectorAll('.slide button').forEach(button=>button.addEventListener('mouseout', ()=>{
+	pause = false;
+}));
 
 document.querySelector('.signup-session form').addEventListener('submit', (e) => {
 		e.preventDefault();
